@@ -1,0 +1,23 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+svg {
+  display: block;
+  margin: auto;
+}
+
+line {
+  stroke: black;
+}
+
+#std {
+  margin-top: 20px;
+  margin-left: 500px;
+}
