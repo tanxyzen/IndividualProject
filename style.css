@@ -1,0 +1,36 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+#rewardChart {
+  display: block;
+  margin: auto;
+}
+
+.rewardChart {
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 2px solid black;
+}
+
+.interaction {
+  padding-left: 85px;
+  padding-bottom: 30px;
+}
+
+#actionChart {
+  display: block;
+  margin: auto;
+}
+
+.actionChart {
+  margin-left: 100px;
+  margin-right: 100px;
+  border: 2px solid black;
+}
