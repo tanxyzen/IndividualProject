@@ -1,0 +1,27 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
+
+#rewardChart {
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+}
+
+.interaction {
+  padding-right: 150px;
+  padding-top: 20px;
+  text-align: right;
+}
+
+#actionChart {
+  display: block;
+  margin: auto;
+  border: 2px solid black;
+}
