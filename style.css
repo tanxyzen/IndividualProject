@@ -1,0 +1,63 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+#rewardChart {
+  display: block;
+  margin: auto;
+}
+
+.rewardChart {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+.interaction {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#actionChart {
+  display: block;
+  margin: auto;
+}
+
+.actionChart {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+#frequencyChart315 {
+  display: block;
+  margin: auto;
+}
+
+.frequencyChart315 {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+#frequencyChart385 {
+  display: block;
+  margin: auto;
+}
+
+.frequencyChart385 {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
