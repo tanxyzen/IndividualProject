@@ -1,0 +1,74 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+#scoreChart {
+  display: block;
+  margin: auto;
+}
+
+.scoreChart {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+#rewardChart {
+  display: block;
+  margin: auto;
+}
+
+.rewardChart {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+.scoreChart, .interaction {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+#actionChart {
+  display: block;
+  margin: auto;
+}
+
+.actionChart {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+}
+
+.actionChart, .interaction {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+.frequencyChartRow {
+  border-top: 3px solid black;
+  border-bottom: 3px solid black;
+  overflow: auto;
+  padding-left: 70px;
+}
+
+.frequencyChart {
+  float: left;
+  width: 50%;
+}
+
+.bar {
+  fill: steelblue;
+}
