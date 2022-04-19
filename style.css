@@ -1,0 +1,77 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+  background-color: black;
+  color: white;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  text-align: center;
+}
+
+h4 {
+  text-align: center;
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+.scoretab, .rewardtab, .actiontab {
+  border-top: 3px solid black;
+  overflow: auto;
+}
+
+.scoretab button, .rewardtab button, .actiontab button {
+  background-color: #ccc;
+  float: left;
+  border: none;
+  cursor: pointer;
+  padding: 15px 40px;
+  transition: 0.3s;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.scoretab button:hover, .rewardtab button:hover, .actiontab button:hover {
+  background-color: #ddd;
+}
+
+.scoretab button.active, .rewardtab button.active, .actiontab button.active {
+  background-color: inherit;
+}
+
+.scoretabcontent, .rewardtabcontent, .actiontabcontent {
+  padding-bottom: 20px;
+  display: none;
+}
+
+#scoreChart, #rewardChart, #actionChart, #parallelCoordChart, #rewardFreqChart {
+  display: block;
+  margin: auto;
+}
+
+.chart {
+  padding-bottom: 20px;
+}
+
+.interaction {
+  text-align: center;
+}
+
+.column {
+  float: left;
+  width: 300px;
+  text-align: center;
+}
