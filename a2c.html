@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+
+  <title>Visualizing Deep Reinforcement Learning</title>
+</head>
+<body>
+  <h1>A2C Atari Breakout</h1>
+  <div class="scoretab">
+    <button class="scoretablinks" onclick="scores(event, 'scoresTab')" id="defaultScore">Scores</button>
+    <button class="scoretablinks" onclick="scores(event, 'filtersTab')">Filters</button>
+  </div>
+  <div id="scoresTab" class="scoretabcontent">
+    <div class="chart">
+      <svg id="scoreChart"></svg>
+    </div>
+    <div class="interaction">
+      <input type="checkbox" id="std" checked> Standard Deviation	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="filter" checked> Filter &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+  <div id="filtersTab" class="scoretabcontent">
+    <div class="chart">
+      <h2>Reward Frequency</h2>
+      <div class="interaction"><h3 id="filter-value-time"></h3></div>
+      <p style="text-align: center; font-size: 17px;">Each chart represents 5 episodes</p>
+      <svg id="rewardFreqChart" width="1500" height="350"></svg>
+    </div>
+    <div class="interaction"><div id="filter-slider-time"></div></div>
+  </div>
+  <br>
+  <div class="actiontab">
+    <button class="actiontablinks" onclick="actions(event, 'actions')" id="defaultActions">Actions</button>
+    <button class="actiontablinks" onclick="actions(event, 'x')">x</button>
+  </div>
+  <div id="actions" class="actiontabcontent">
+    <div class="chart">
+      <svg id="actionChart"></svg>
+    </div>
+    <div class="interaction">
+      <button type="button" id="stacked">Stacked</button>
+      <button type="button" id="noop">Noop</button>
+      <button type="button" id="fire">Fire</button>
+      <button type="button" id="right">Right</button>
+      <button type="button" id="left">Left</button>
+    </div>
+  </div>
+  <div id="x" class="actiontabcontent">
+
+  </div>
+  <br>
+  <div class="rewardtab">
+    <button class="rewardtablinks" onclick="rewards(event, 'rewards')" id="defaultRewards">Rewards</button>
+    <button class="rewardtablinks" onclick="rewards(event, 'x')">x</button>
+  </div>
+  <div id="rewards" class="rewardtabcontent">
+    <div class="chart">
+      <svg id="rewardChart"></svg>
+    </div>
+  </div>
+  <div id="x" class="rewardtabcontent">
+
+  </div>
+</body>
+<script src="a2c.js"></script>
+</html>
