@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+
+  <title>Visualizing Deep Reinforcement Learning</title>
+</head>
+<body>
+  <h1>Visualizing Deep Reinforcement Learning</h1>
+  <a href="https://z3n-t4n.github.io/IndividualProject/website/dqn.html"><button class="button pageActive"><b>DQN</b></button></a>
+  <a href="https://z3n-t4n.github.io/IndividualProject/website/a2c.html"><button class="button"><b>A2C</b></button></a>
+  <div class="overviewTab">
+    <button class="overviewTabLinks" onclick="overview(event, 'scoresTab')" id="defaultOverview">Scores</button>
+    <button class="overviewTabLinks" onclick="overview(event, 'rewardsTab')">Rewards</button>
+    <button class="overviewTabLinks" onclick="overview(event, 'actionsTab')">Actions</button>
+    <h2><i>Overview</i></h2>
+  </div>
+  <div id="scoresTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="scoreChart"></svg>
+    </div>
+    <div class="interaction">
+      <input type="checkbox" id="std" checked> Standard Deviation	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <input type="checkbox" id="aoiScores" checked> Agent of Interest
+    </div>
+  </div>
+  <div id="rewardsTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="rewardChart"></svg>
+    </div>
+    <div class="interaction">
+      <input type="checkbox" id="aoiRewards" checked> Agent of Interest
+    </div>
+  </div>
+  <div id="actionsTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="actionChart"></svg>
+    </div>
+    <div class="interaction">
+      <button type="button" id="stacked">Stacked</button>
+      <button type="button" id="noop">Noop</button>
+      <button type="button" id="fire">Fire</button>
+      <button type="button" id="right">Right</button>
+      <button type="button" id="left">Left</button>
+    </div>
+  </div>
+
+  <div class="aoiTab">
+    <button class="aoiTabLinks" onclick="aoi(event, 'parallelCoordTab')" id="defaultAoi">Parallel Coordinates</button>
+    <button class="aoiTabLinks" onclick="aoi(event, 'rewardFreqTab')">Reward Frequency</button>
+    <h2><i>Agent of Interest</i></h2>
+  </div>
+  <div id="parallelCoordTab" class="aoiTabContent">
+    <div class="row">
+      <div class="column">
+        <h3>Timestep 1300000</h3>
+        <br>
+        <img src="./img/dqn/agent_of_interest/timestep_1300000/parallel_coord.png" width="650px">
+      </div>
+      <div class="column">
+        <h3>Timestep 2250000</h3>
+        <br>
+        <img src="./img/dqn/agent_of_interest/timestep_2250000/parallel_coord.png" width="650px">
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3>Timestep 4300000</h3>
+        <br>
+        <img src="./img/dqn/agent_of_interest/timestep_4300000/parallel_coord.png" width="650px">
+      </div>
+      <div class="column">
+        <h3>Timestep 4400000</h3>
+        <br>
+        <img src="./img/dqn/agent_of_interest/timestep_4400000/parallel_coord.png" width="650px">
+      </div>
+    </div>
+  </div>
+  <div id="rewardFreqTab" class="aoiTabContent">
+    <div class="row">
+      <div class="column">
+        <h3>Timestep 1300000</h3>
+        <br>
+        <div class="leftColumn">
+          <img src="./img/dqn/agent_of_interest/timestep_1300000/reward_freq.png" width="470px">
+        </div>
+        <div class="rightColumn">
+          <p>Agent learns a new strategy</p>
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_1300000/strategy.png" height="200px">
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_1300000/strategy.gif" height="200px">
+        </div>
+      </div>
+      <div class="column">
+        <h3>Timestep 2250000</h3>
+        <br>
+        <div class="leftColumn">
+          <img src="./img/dqn/agent_of_interest/timestep_2250000/reward_freq.png" width="470px">
+        </div>
+        <div class="rightColumn">
+          <p>Agent stuck in a loop</p>
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_2250000/loop.png" height="200px">
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_2250000/loop.gif" height="200px">
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="column">
+        <h3>Timestep 4300000</h3>
+        <br>
+        <div class="leftColumn">
+          <img src="./img/dqn/agent_of_interest/timestep_4300000/reward_freq.png" width="470px">
+        </div>
+        <div class="rightColumn">
+          <p>Agent fails to catch the ball</p>
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_4300000/fail.png" height="200px">
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_4300000/fail.gif" height="200px">
+        </div>
+      </div>
+      <div class="column">
+        <h3>Timestep 4400000</h3>
+        <br>
+        <div class="leftColumn">
+          <img src="./img/dqn/agent_of_interest/timestep_4400000/reward_freq.png" width="470px">
+        </div>
+        <div class="rightColumn">
+          <p>Agent stuck in a loop</p>
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_4400000/loop.png" height="200px">
+          <br>
+          <img src="./img/dqn/agent_of_interest/timestep_4400000/loop.gif" height="200px">
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+<script src="dqn.js"></script>
+</html>
