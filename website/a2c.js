@@ -1,6 +1,6 @@
 function score() {
   // data for a2c scores
-  var url = "https://z3n-t4n.github.io/IndividualProject/a2c/scores.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/a2c/scores.json";
 
   var width = 1400, height = 550, spacing = 150;
 
@@ -197,7 +197,7 @@ score();
 
 function reward() {
   // data for a2c rewards
-  var url = "https://z3n-t4n.github.io/IndividualProject/a2c/rewards.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/a2c/rewards.json";
 
   var width = 1400, height = 550, spacing = 150;
 
@@ -305,7 +305,7 @@ reward();
 
 function action() {
   // data for a2c actions
-  var url = "https://z3n-t4n.github.io/IndividualProject/a2c/actions.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/a2c/actions.json";
 
   var width = 1400, height = 550, spacing = 150;
 

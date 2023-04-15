@@ -6,7 +6,7 @@ var timestepVar;
 
 function score() {
   // data for dqn scores
-  var url = "https://z3n-t4n.github.io/IndividualProject/dqn/scores.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/dqn/scores.json";
 
   var scoreChart = d3
     .select("#scoreChart")
@@ -262,7 +262,7 @@ function score() {
   });
 
   // data for filter scores
-  var url2 = "https://z3n-t4n.github.io/IndividualProject/dqn/filter/scores.json";
+  var url2 = "https://tanxyzen.github.io/IndividualProject/dqn/filter/scores.json";
 
   // legend
   scoreChart.append("circle")
@@ -465,7 +465,7 @@ score();
 
 function reward() {
   // data for rewards
-  var url = "https://z3n-t4n.github.io/IndividualProject/dqn/rewards.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/dqn/rewards.json";
 
   var rewardChart = d3
     .select("#rewardChart")
@@ -631,7 +631,7 @@ function reward() {
   });
 
   // data for filter rewards
-  var url2 = "https://z3n-t4n.github.io/IndividualProject/dqn/filter/rewards.json";
+  var url2 = "https://tanxyzen.github.io/IndividualProject/dqn/filter/rewards.json";
 
   // legend
   rewardChart.append("circle")
@@ -766,7 +766,7 @@ reward();
 
 function action() {
   // data for actions
-  var url = "https://z3n-t4n.github.io/IndividualProject/dqn/actions.json";
+  var url = "https://tanxyzen.github.io/IndividualProject/dqn/actions.json";
 
   var actionChart = d3
     .select("#actionChart")
