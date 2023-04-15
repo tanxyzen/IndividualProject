@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="./style.css">
+
+  <!-- D3.js -->
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="https://unpkg.com/d3-simple-slider"></script>
+
+  <title>Visualizing Deep Reinforcement Learning</title>
+</head>
+<body>
+  <h1>Visualizing Deep Reinforcement Learning</h1>
+  <a href="https://tanxyzen.github.io/IndividualProject/website/dqn.html"><button class="button"><b>Atari Breakout (DQN)</b></button></a>
+  <a href="https://tanxyzen.github.io/IndividualProject/website/a2c.html"><button class="button pageActive"><b>Atari Breakout (A2C)</b></button></a>
+  <div class="overviewTab">
+    <button class="overviewTabLinks" onclick="overview(event, 'scoresTab')" id="defaultOverview">Scores</button>
+    <button class="overviewTabLinks" onclick="overview(event, 'rewardsTab')">Rewards</button>
+    <button class="overviewTabLinks" onclick="overview(event, 'actionsTab')">Actions</button>
+    <h2><i>Overview</i></h2>
+  </div>
+  <div id="scoresTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="scoreChart"></svg>
+    </div>
+    <div class="interaction">
+      <input type="checkbox" id="std" checked> Standard Deviation	&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+    </div>
+  </div>
+  <div id="rewardsTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="rewardChart"></svg>
+    </div>
+  </div>
+  <div id="actionsTab" class="overviewTabContent">
+    <div class="chart">
+      <svg id="actionChart"></svg>
+    </div>
+    <div class="interaction">
+      <button type="button" id="noop">Noop</button>
+      <button type="button" id="fire">Fire</button>
+      <button type="button" id="right">Right</button>
+      <button type="button" id="left">Left</button>
+      <button type="button" id="stacked">Stacked</button>
+    </div>
+  </div>
+</body>
+<script src="a2c.js"></script>
+</html>
